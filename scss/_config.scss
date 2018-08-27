@@ -12,7 +12,9 @@ $background-opacity: 0.85;
 
 @mixin background {
   @if $show-home-image {
-    &#bg-img {
+    
+    &#bg-img { 
+      overflow: hidden;     
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
