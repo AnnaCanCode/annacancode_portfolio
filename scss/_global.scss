@@ -6,7 +6,7 @@
   body {
     @include background;
     background: $primary-color; 
-    color: #ffffff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,10 +49,10 @@
           }
           }
       }
-      &#home {
+      &#home, &#about {
       overflow: hidden;               
       h1 {
-      margin-top: 40vh;
+      margin-top: 30vh;
           }
       }
   }  
@@ -73,3 +73,35 @@
   .text-secondary {
     color: $secondary-color;
   }
+
+/*Grid*/
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bioimage'
+    'bio';
+    grid-template-columns: 1fr;
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 5px;
+        border: 3px solid $secondary-color;
+    }
+    
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+}
+
+#main-footer {
+    text-align: left;
+    padding: 1rem;
+    background: $black;
+    color: set-text-color($primary-color);
+    height: 60px;
+}
