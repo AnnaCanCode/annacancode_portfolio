@@ -45,8 +45,7 @@
 .menu {
     position: fixed;
     top: 0;
-    width: 100%;
-    opacity: 0.9;
+    width: 100%;    
     visibility: hidden;
 
     &.show {
@@ -68,7 +67,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: rgba(darken($primary-color, 5), 0.9);
         list-style: none;
         transform: translate3d(100%, 0, 0);
         @include easeOut;
@@ -81,7 +80,7 @@
 
     /*Branding Side*/
     &-branding {
-        background: $primary-color;
+        background: rgba($primary-color, 0.9);
         transform: translate3d(-100%, 0, 0);
         @include easeOut;
 
@@ -91,11 +90,11 @@
         }
 
         .portrait {
-            width: 250px;
-            height: 250px;
-            background: url('../img/portrait.jpg');
+            width: 145px;
+            height: 145px;
+            background: url('../img/portrait_small.jpg');
             border-radius: 50%;
-            border: 5px solid $secondary-color;
+            border: 3px solid $secondary-color;
         }
     }
 
@@ -105,7 +104,7 @@
         @include easeOut;
 
         &.show {
-            /*Slide in from right*/
+            /*Slide in from bottom*/
             transform: translate3d(0, 0, 0);
         }
 
@@ -117,7 +116,7 @@
     .nav-link {
         display: inline-block;
         position: relative;
-        font-size: 30px;
+        font-size: 15px;
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
