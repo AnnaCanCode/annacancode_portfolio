@@ -1,5 +1,6 @@
 /*Variables*/
 /*Mixins*/
+/*Set Text Color*/
 /*Media Query Mixins*/
 /*Global*/
 * {
@@ -52,10 +53,10 @@ main {
       main .icons a:hover {
         color: #eece1a;
         transition: all 0.5s ease-out; }
-  main#home {
+  main#home, main#about {
     overflow: hidden; }
-    main#home h1 {
-      margin-top: 40vh; }
+    main#home h1, main#about h1 {
+      margin-top: 30vh; }
 
 /*Links*/
 a {
@@ -71,49 +72,29 @@ header {
 .text-secondary {
   color: #eece1a; }
 
-/*Smartphones*/
-/*Tablets & Small Laptops*/
-@media screen and (min-width: 768px) {
-  /*Headings*/
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    text-align: left;
-    font-size: 3rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
-    text-align: left;
-    font-size: 2rem; }
-  /*Main*/
-  main {
-    padding: 3rem; }
-    main .icons {
-      text-align: left; }
-    main#home {
-      overflow: hidden; }
-      main#home h1 {
-        margin-top: 20vh; }
-  .menu-branding .portrait {
-    width: 250px;
-    height: 250px;
-    background: url("../img/portrait.jpg"); }
-  .menu .nav-link {
-    font-size: 30px; } }
+/*Grid*/
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage' 'bio';
+  grid-template-columns: 1fr; }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 5px;
+    border: 3px solid #eece1a; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+    text-align: justify;
+    text-justify: inter-character; }
 
-/*Desktop & Laptops*/
-@media screen and (min-width: 1170px) {
-  /*Headings*/
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
-    text-align: left;
-    font-size: 4rem; }
-  /*Main*/
-  main {
-    padding: 4rem; }
-    main .icons {
-      text-align: left; }
-    main#home {
-      overflow: hidden; }
-      main#home h1 {
-        margin-top: 20vh; } }
+#main-footer {
+  text-align: left;
+  padding: 1rem;
+  background: #000000;
+  color: #ffffff;
+  height: 60px; }
 
 /*Menu Button*/
 .menu-btn {
@@ -223,3 +204,50 @@ header {
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+/*Smartphones*/
+/*Tablets & Small Laptops*/
+@media screen and (min-width: 768px) {
+  /*Headings*/
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    text-align: left;
+    font-size: 3rem; }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    text-align: left;
+    font-size: 2rem; }
+  /*Main*/
+  main {
+    padding: 3rem; }
+    main .icons {
+      text-align: left; }
+    main#home, main#about {
+      overflow: hidden; }
+      main#home h1, main#about h1 {
+        margin-top: 20vh; }
+  .menu-branding .portrait {
+    width: 250px;
+    height: 250px;
+    background: url("../img/portrait.jpg"); }
+  .menu .nav-link {
+    font-size: 30px; }
+  .about-info {
+    grid-template-areas: 'bioimage bio bio';
+    grid-template-columns: repeat(3, fr); } }
+
+/*Desktop & Laptops*/
+@media screen and (min-width: 1170px) {
+  /*Headings*/
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    text-align: left;
+    font-size: 2.2rem; }
+  /*Main*/
+  main {
+    padding: 4rem; }
+    main .icons {
+      text-align: left; }
+    main#home {
+      overflow: hidden; }
+      main#home h1 {
+        margin-top: 20vh; } }
