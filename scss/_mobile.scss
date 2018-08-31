@@ -25,7 +25,7 @@
         .icons { 
             text-align: left;       
         }
-        &#home, &#about {
+        &#home, &#about, &#work {
             overflow: hidden;               
             h1 {
             margin-top: 20vh;
@@ -44,11 +44,16 @@
             font-size: 30px;
         }
     } 
-    
+    /*Grid About*/
     .about-info {
         grid-template-areas:
         'bioimage bio bio';
-        grid-template-columns: repeat(3,fr);
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    /*Grid Work*/
+    .projects {          
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -73,11 +78,16 @@
         .icons { 
             text-align: left;       
         }
-        &#home {
+        &#home, &#about, &#work {
             overflow: hidden;               
             h1 {
             margin-top: 20vh;
             }
           }
+    }
+
+    /*Grid Work*/
+    .projects {         
+        grid-template-columns: repeat(4, 1fr);
     }
 }
