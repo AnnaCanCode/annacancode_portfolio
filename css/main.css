@@ -44,7 +44,7 @@ h1.sm-heading, h2.sm-heading, h3.sm-heading {
 /*Main*/
 main {
   padding: 2rem;
-  height: 100%; }
+  min-height: calc(100vh-80px); }
   main .icons {
     text-align: center;
     margin-top: 1rem; }
@@ -53,9 +53,9 @@ main {
       main .icons a:hover {
         color: #eece1a;
         transition: all 0.5s ease-out; }
-  main#home, main#about, main#work {
+  main#home, main#about, main#work, main#contact {
     overflow: hidden; }
-    main#home h1, main#about h1, main#work h1 {
+    main#home h1, main#about h1, main#work h1, main#contact h1 {
       margin-top: 30vh; }
 
 /*Links*/
@@ -135,6 +135,40 @@ header {
   background: #000000;
   color: #ffffff;
   height: 60px; }
+
+/*Contact buttons*/
+figure {
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  perspective: 500px;
+  -webkit-perspective: 500px; }
+
+figure div {
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: 0.25s; }
+  figure div:hover {
+    transform: rotateX(-90deg); }
+
+figure span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 5px solid #ffffff;
+  line-height: 50px;
+  font-size: 10px;
+  text-align: center;
+  text-transform: lowercase; }
+  figure span:nth-child(1) {
+    color: #ffffff;
+    transform: translate3d(0, 0, 30px); }
+  figure span:nth-child(2) {
+    color: #444;
+    background: #eece1a;
+    transform: rotateX(90deg) translate3d(0, 0, 30px); }
 
 /*Menu Button*/
 .menu-btn {
@@ -260,9 +294,9 @@ header {
     padding: 3rem; }
     main .icons {
       text-align: left; }
-    main#home, main#about, main#work {
+    main#home, main#about, main#work, main#contact {
       overflow: hidden; }
-      main#home h1, main#about h1, main#work h1 {
+      main#home h1, main#about h1, main#work h1, main#contact h1 {
         margin-top: 20vh; }
   .menu-branding .portrait {
     width: 250px;
@@ -276,7 +310,12 @@ header {
     grid-template-columns: repeat(3, 1fr); }
   /*Grid Work*/
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  /*Contact buttons*/
+  figure {
+    width: 500px; }
+  figure span {
+    font-size: 25px; } }
 
 /*Desktop & Laptops*/
 @media screen and (min-width: 1170px) {
@@ -289,12 +328,6 @@ header {
   /*Main*/
   main {
     padding: 4rem; }
-    main .icons {
-      text-align: left; }
-    main#home, main#about, main#work {
-      overflow: hidden; }
-      main#home h1, main#about h1, main#work h1 {
-        margin-top: 20vh; }
   /*Grid Work*/
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
