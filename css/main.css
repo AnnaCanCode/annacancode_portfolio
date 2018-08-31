@@ -14,7 +14,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url("../img/background.jpg");
+    background: url("../img/AnnaCanCode_big.png");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -51,7 +51,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #0905ff;
         transition: all 0.5s ease-out; }
   main#home, main#about, main#work, main#contact {
     overflow: hidden; }
@@ -70,7 +70,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #0905ff; }
 
 /*Grid*/
 /*Grid - About*/
@@ -83,7 +83,7 @@ header {
     grid-area: bioimage;
     margin: auto;
     border-radius: 5px;
-    border: 3px solid #eece1a; }
+    border: 3px solid #0905ff; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem;
@@ -102,7 +102,7 @@ header {
     opacity: 0.5; }
     .projects img:hover {
       opacity: 1;
-      border-color: #eece1a;
+      border-color: #0905ff;
       transition: all 0.5s ease-out; }
 
 /*Buttons*/
@@ -113,7 +113,7 @@ header {
   margin-bottom: 0.3rem;
   text-align: center; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #0905ff;
     color: #000000; }
 
 .btn-dark {
@@ -166,8 +166,8 @@ figure span {
     color: #ffffff;
     transform: translate3d(0, 0, 30px); }
   figure span:nth-child(2) {
-    color: #444;
-    background: #eece1a;
+    color: #ffffff;
+    background: #0905ff;
     transform: rotateX(90deg) translate3d(0, 0, 30px); }
 
 /*Menu Button*/
@@ -192,13 +192,13 @@ figure span {
       /*2 Line -  Hide*/
       /*3 Line -  Rotate*/ }
       .menu-btn.close .btn-line:nth-child(1) {
-        background: #eece1a;
+        background: #0905ff;
         transition: all 0.5s ease-out;
         transform: rotate(45deg) translate(5px, 5px); }
       .menu-btn.close .btn-line:nth-child(2) {
         opacity: 0; }
       .menu-btn.close .btn-line:nth-child(3) {
-        background: #eece1a;
+        background: #0905ff;
         transition: all 0.5s ease-out;
         transform: rotate(-45deg) translate(7px, -6px); }
 
@@ -244,7 +244,7 @@ figure span {
       height: 145px;
       background: url("../img/portrait_small.jpg");
       border-radius: 50%;
-      border: 3px solid #eece1a; }
+      border: 3px solid #0905ff; }
   .menu .nav-item {
     transform: translate3d(0, 600px, 0);
     transition: all 0.5s ease-out; }
@@ -252,7 +252,7 @@ figure span {
       /*Slide in from bottom*/
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #0905ff; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -264,7 +264,7 @@ figure span {
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #0905ff; }
 
 /*Delay each nav item slide by 0.1s*/
 .nav-item:nth-child(1) {
