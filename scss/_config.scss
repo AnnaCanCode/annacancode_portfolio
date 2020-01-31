@@ -1,6 +1,6 @@
 /*Variables*/
-$primary-color: #ffff00;
-$secondary-color: #2725c4;
+$primary-color: #2725c4;
+$secondary-color: #ffff00;
 $white: #ffffff;
 $black: #000000;
 $show-home-image: true;
@@ -37,10 +37,10 @@ $background-opacity: 0.5;
 /*Set Text Color*/
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
-    @return $black;
+    @return $white;
   }
   @else { 
-   @return $white;
+   @return $black;
   }
 }
 

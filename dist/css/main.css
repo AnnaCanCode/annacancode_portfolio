@@ -7,7 +7,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #2725c4;
   color: #ffffff;
   height: 100%;
   margin: 0;
@@ -25,7 +25,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.85); }
+      background: rgba(39, 37, 196, 0.5); }
 
 /*Headings*/
 h1.lg-heading, h2.lg-heading, h3.lg-heading {
@@ -39,7 +39,7 @@ h1.sm-heading, h2.sm-heading, h3.sm-heading {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(73, 73, 73, 0.5); }
+  background: rgba(22, 21, 110, 0.5); }
 
 /*Main*/
 main {
@@ -51,7 +51,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #0905ff;
+        color: #ffff00;
         transition: all 0.5s ease-out; }
   main#home, main#about, main#work, main#contact {
     overflow: hidden; }
@@ -70,7 +70,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #0905ff; }
+  color: #ffff00; }
 
 /*Grid*/
 /*Grid - About*/
@@ -83,7 +83,7 @@ header {
     grid-area: bioimage;
     margin: auto;
     border-radius: 5px;
-    border: 3px solid #0905ff; }
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem;
@@ -102,7 +102,7 @@ header {
     opacity: 0.5; }
     .projects img:hover {
       opacity: 1;
-      border-color: #0905ff;
+      border-color: #ffff00;
       transition: all 0.5s ease-out; }
 
 /*Buttons*/
@@ -113,7 +113,7 @@ header {
   margin-bottom: 0.3rem;
   text-align: center; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #0905ff;
+    background: #ffff00;
     color: #000000; }
 
 .btn-dark {
@@ -123,7 +123,7 @@ header {
   border-bottom-right-radius: 5px; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #edecfc;
   color: #333;
   margin-bottom: 0;
   border-top-left-radius: 5px;
@@ -167,7 +167,9 @@ figure span {
     transform: translate3d(0, 0, 30px); }
   figure span:nth-child(2) {
     color: #ffffff;
-    background: #0905ff;
+    background: #ffff00;
+    color: #000000;
+    border-color: #000000;
     transform: rotateX(90deg) translate3d(0, 0, 30px); }
 
 /*Menu Button*/
@@ -192,13 +194,13 @@ figure span {
       /*2 Line -  Hide*/
       /*3 Line -  Rotate*/ }
       .menu-btn.close .btn-line:nth-child(1) {
-        background: #0905ff;
+        background: #ffff00;
         transition: all 0.5s ease-out;
         transform: rotate(45deg) translate(5px, 5px); }
       .menu-btn.close .btn-line:nth-child(2) {
         opacity: 0; }
       .menu-btn.close .btn-line:nth-child(3) {
-        background: #0905ff;
+        background: #ffff00;
         transition: all 0.5s ease-out;
         transform: rotate(-45deg) translate(7px, -6px); }
 
@@ -225,7 +227,7 @@ figure span {
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: rgba(55, 55, 55, 0.9);
+    background: rgba(30, 29, 153, 0.95);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out; }
@@ -233,7 +235,7 @@ figure span {
       /*Slide in from right*/
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: rgba(68, 68, 68, 0.9);
+    background: rgba(39, 37, 196, 0.92);
     transform: translate3d(-100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -244,7 +246,7 @@ figure span {
       height: 145px;
       background: url("../img/portrait_small.jpg");
       border-radius: 50%;
-      border: 3px solid #0905ff; }
+      border: 5px solid #ffff00; }
   .menu .nav-item {
     transform: translate3d(0, 600px, 0);
     transition: all 0.5s ease-out; }
@@ -252,7 +254,7 @@ figure span {
       /*Slide in from bottom*/
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #0905ff; }
+      color: #ffff00; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -264,7 +266,7 @@ figure span {
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #0905ff; }
+      color: #ffff00; }
 
 /*Delay each nav item slide by 0.1s*/
 .nav-item:nth-child(1) {
