@@ -1,11 +1,11 @@
 /*Variables*/
-$primary-color: #444;
-$secondary-color: #0905ff;
+$primary-color: #ffff00;
+$secondary-color: #2725c4;
 $white: #ffffff;
 $black: #000000;
 $show-home-image: true;
 $home-image: url('../img/AnnaCanCode.png');
-$background-opacity: 0.85;
+$background-opacity: 0.5;
 
 /*Mixins*/
 @mixin easeOut {
