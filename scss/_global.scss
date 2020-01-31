@@ -1,0 +1,207 @@
+/*Global*/
+*{
+    box-sizing: border-box;
+  }
+  
+  body {
+    @include background;
+    background: $primary-color; 
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+  }
+  
+     /*Headings*/
+     h1, h2, h3 {
+      &.lg-heading {
+          text-align: center;
+          font-size: 2rem;                
+          padding: 0.2rem 0.5rem;
+          margin-bottom: 1rem;
+      }
+  
+      &.sm-heading {
+          text-align: center; 
+          font-size: 1.5rem;                
+          margin-bottom: 2rem;
+          padding: 0.2rem 1rem;
+          background: rgba(darken($primary-color, 20), 0.5);
+      }
+  }
+  
+  /*Main*/
+  main {        
+      padding: 2rem;
+      min-height: calc(100vh-80px);
+  
+      .icons { 
+      text-align: center;           
+      margin-top: 1rem;
+  
+      a {            
+          padding: 0.4rem;
+  
+          &:hover {
+          color: $secondary-color;
+          @include easeOut;
+          }
+          }
+      }
+      &#home, &#about, &#work, &#contact {
+      overflow: hidden;               
+      h1 {
+      margin-top: 30vh;
+          }
+      }
+  }  
+  
+  /*Links*/
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /*Header*/
+  header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .text-secondary {
+    color: $secondary-color;    
+  }
+
+/*Grid*/
+
+/*Grid - About*/
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bioimage'
+    'bio';
+    grid-template-columns: 1fr;
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 5px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    }
+    
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+}
+
+/*Grid - Work*/
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;    
+    grid-template-columns: 1fr;
+
+    img {
+        width: 100%;
+        border: 3px solid $white;
+        border-radius: 5px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+/*Buttons*/
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-bottom: 0.3rem;
+    text-align: center;
+
+    &:hover {        
+        background: $secondary-color;
+        color: set-text-color($black);
+    }
+
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: $white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
+    margin-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+#main-footer {
+    text-align: left;
+    padding: 1rem;
+    background: $black;
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+/*Contact buttons*/
+figure {  
+    width: 200px;
+    height:60px;
+    cursor:pointer;
+    perspective:500px;
+    -webkit-perspective:500px;
+}
+figure div {
+    height:100%;
+    transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transition:0.25s;
+    
+    &:hover {
+        transform:rotateX(-90deg);
+    }
+}
+
+figure span {  
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    border: 5px solid $white;    
+    line-height: 50px;
+    font-size: 10px;
+    text-align: center;
+    text-transform: lowercase;
+
+    &:nth-child(1) {
+        color: $white;
+        transform: translate3d(0, 0, 30px);       
+    }
+
+    &:nth-child(2){
+        color: set-text-color($primary-color);
+        background: $secondary-color;
+        color: $black;
+        border-color: $black;
+        transform: rotateX(90deg) translate3d(0, 0, 30px);        
+    }
+}
